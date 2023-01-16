@@ -32,7 +32,7 @@ Base.:*(x::Dual, a::Number) = Dual(x.real * a, x.dual * a)
 Base.:*(x::Dual, y::Dual) = Dual(x.real * y.real, x.real * y.dual + x.dual * y.real)
 
 #conjugate
-Base.conj(x::real) = Dual(x.real,-x.dual)
+Base.conj(x::Dual) = Dual(x.real,-x.dual)
 
 #inverse
 #	1/(a + eps b)
