@@ -29,7 +29,7 @@ Base.:*(x::Dual, a::Number) = Dual(x.real * a, x.dual * a)
 #	eps^2 = 0
 #
 #	x * y = a*c + eps * (a*d + c*b )
-Base.:*(x:Dual, y:Dual) = Dual(x.real * y.real, x.real * y.dual + x.dual * y.real)
+Base.:*(x::Dual, y::Dual) = Dual(x.real * y.real, x.real * y.dual + x.dual * y.real)
 
 #conjugate
 Base.conj(x::real) = Dual(x.real,-x.dual)
