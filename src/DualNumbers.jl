@@ -39,7 +39,7 @@ Base.conj(x::real) = Dual(x.real,-x.dual)
 #	=(a - eps b)/[(a + eps b)(a - eps b)]
 #	=(a - eps b)/a^2
 #	=(a - eps b)*(1/a^2)
-Base.inv(x::Dual) = conj(x) * (1/x.real^2)
+Base.inv(x::Dual) = conj(x.dual) * (1/x.real^2)
 
 #division
 Base.:/(x::Dual, y::Dual) = x * inv(y)
