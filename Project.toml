@@ -1,0 +1,7 @@
+name = "DualNumbers"
+uuid = "bac5c16f-e768-49e3-8c91-5af5d0057b11"
+authors = ["dqu "]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
